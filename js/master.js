@@ -40,10 +40,10 @@ document.getElementById('button1').addEventListener('click', () => {
     ) {
         if (_inp2 == null || _inp2 == '') {
             document.getElementById('lable1').style.display = 'flex'
-            document.getElementById('lable1').style.color = 'red'
+            document.getElementById('lable1').style.color = 'rgb(166, 0, 0)'
             document.getElementById('lable1').style.opacity = 1
             document.getElementById('lable2').style.display = 'flex'
-            document.getElementById('lable2').style.color = 'red'
+            document.getElementById('lable2').style.color = 'rgb(166, 0, 0)'
             document.getElementById('lable2').style.opacity = 1
 
         }
