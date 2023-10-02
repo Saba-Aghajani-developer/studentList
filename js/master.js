@@ -40,10 +40,10 @@ document.getElementById('button1').addEventListener('click', () => {
     ) {
         if (_inp2 == null || _inp2 == '') {
             document.getElementById('lable1').style.display = 'flex'
-            document.getElementById('lable1').style.color = 'rgb(166, 0, 0)'
+            document.getElementById('lable1').style.color = 'red'
             document.getElementById('lable1').style.opacity = 1
             document.getElementById('lable2').style.display = 'flex'
-            document.getElementById('lable2').style.color = 'rgb(166, 0, 0)'
+            document.getElementById('lable2').style.color = 'red'
             document.getElementById('lable2').style.opacity = 1
 
         }
@@ -62,21 +62,18 @@ document.getElementById('button1').addEventListener('click', () => {
         _div.appendChild(right)
         left.innerText = _inp1 + "'s score is :"
         right.innerText = _inp2
-        console.log(_inp1);
-        console.log(_inp2);
         span = document.createElement('span')
-        span.innerHTML = _inp2
+        span.innerHTML = _inp1
         console.log(span);
         document.getElementById('inp1').value = ''
         document.getElementById('inp2').value = ''
-        _clear()
         // min 
         if (flag == 0) {
             min = _inp2
             flag++
         } else {
-            if (min > _inp2) {
-                min = _inp2
+            if (min > _inp1) {
+                min = _inp1
             }
         }
         // max 
@@ -97,6 +94,7 @@ document.getElementById('button1').addEventListener('click', () => {
         // all 
         all.push([_inp1, _inp2])
         num.push(_inp2)
+        _clear()
 
     }
 })
