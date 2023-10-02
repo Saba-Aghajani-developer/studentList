@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-    background-image: linear-gradient(to right, #141E30 0%, #243B55 51%, #141E30 100%);
+    background-image:  radial-gradient(ellipse at center, #4f8ea5 0%, #343f53 50%, #1c1b26 100%);
 
 }
 
