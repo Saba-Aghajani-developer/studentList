@@ -1,5 +1,7 @@
 # studentList
-![view final](https://github.com/Saba-Aghajani-developer/second-flex-project/assets/135870519/10ad2e8c-c132-464e-944c-34db348b9465)
+![1](https://github.com/Saba-Aghajani-developer/studentList/assets/135870519/aae103cc-8744-41ff-b24e-bbfb88c384b1)
+![2](https://github.com/Saba-Aghajani-developer/studentList/assets/135870519/0c56e0ba-3b40-4841-a2c4-843313404231)
+![3](https://github.com/Saba-Aghajani-developer/studentList/assets/135870519/57734517-6df4-4c89-a732-6fe04ddbc361)
 
 - [Demo Project](https://saba-aghajani-developer.github.io/studentList/)
 
