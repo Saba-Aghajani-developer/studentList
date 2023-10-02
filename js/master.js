@@ -35,53 +35,76 @@ document.getElementById('inp2').addEventListener('keyup', () => {
     }
 })
 document.getElementById('button1').addEventListener('click', () => {
-    k++
-    _div = document.createElement("div");
-    document.getElementsByClassName('box')[0].appendChild(_div)
-    _div.classList.add('test')
-    left = document.createElement("div");
-    right = document.createElement("div");
-    left.classList.add('left')
-    right.classList.add('lr')
-    _div.appendChild(left)
-    _div.appendChild(right)
-    left.innerText = _inp1 + "'s score is :"
-    right.innerText = _inp2
-    console.log(_inp1);
-    console.log(_inp2);
-    span = document.createElement('span')
-    span.innerHTML = _inp2
-    console.log(span);
-    document.getElementById('inp1').value = ''
-    document.getElementById('inp2').value = ''
-    // min 
-    if (flag == 0) {
-        min = _inp2
-        flag++
-    } else {
-        if (min > _inp2) {
-            min = _inp2
+    if (
+        _inp1 == null || _inp1 == ''
+    ) {
+        if (_inp2 == null || _inp2 == '') {
+            document.getElementById('lable1').style.display = 'flex'
+            document.getElementById('lable1').style.color = 'red'
+            document.getElementById('lable1').style.opacity = 1
+            document.getElementById('lable2').style.display = 'flex'
+            document.getElementById('lable2').style.color = 'red'
+            document.getElementById('lable2').style.opacity = 1
+
         }
-    }
-    // max 
-    if (max < _inp2) {
-        max = _inp2
-    }
-    // avg 
-    sum = Number(sum) + Number(_inp2)
-    avg = sum / (k)
-    // pass & fail
-    if (_inp2 >= 10) {
-        pass.push([_inp1, _inp2])
-        console.log('pass is : ' + pass);
     } else {
-        fail.push([_inp1, _inp2])
-        console.log('fail is : ' + fail);
+        document.getElementById('lable1').style.display = 'none'
+        document.getElementById('lable2').style.display = 'none'
+        k++
+        _div = document.createElement("div");
+        document.getElementsByClassName('box')[0].appendChild(_div)
+        _div.classList.add('test')
+        left = document.createElement("div");
+        right = document.createElement("div");
+        left.classList.add('left')
+        right.classList.add('lr')
+        _div.appendChild(left)
+        _div.appendChild(right)
+        left.innerText = _inp1 + "'s score is :"
+        right.innerText = _inp2
+        console.log(_inp1);
+        console.log(_inp2);
+        span = document.createElement('span')
+        span.innerHTML = _inp2
+        console.log(span);
+        document.getElementById('inp1').value = ''
+        document.getElementById('inp2').value = ''
+        _clear()
+        // min 
+        if (flag == 0) {
+            min = _inp2
+            flag++
+        } else {
+            if (min > _inp2) {
+                min = _inp2
+            }
+        }
+        // max 
+        if (max < _inp2) {
+            max = _inp2
+        }
+        // avg 
+        sum = Number(sum) + Number(_inp2)
+        avg = sum / (k)
+        // pass & fail
+        if (_inp2 >= 10) {
+            pass.push([_inp1, _inp2])
+            console.log('pass is : ' + pass);
+        } else {
+            fail.push([_inp1, _inp2])
+            console.log('fail is : ' + fail);
+        }
+        // all 
+        all.push([_inp1, _inp2])
+        num.push(_inp2)
+
     }
-    // all 
-    all.push([_inp1, _inp2])
-    num.push(_inp2)
 })
+function _clear() {
+    _inp1 = ''
+    _inp2 = ''
+}
+
 document.getElementById('button2').addEventListener('click', () => {
     document.getElementById('ddd').innerHTML = ''
     document.getElementById('ddd').innerHTML = 'max score is:' + max
