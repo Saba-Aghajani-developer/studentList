@@ -73,6 +73,7 @@ main {
     border: none;
     text-transform: capitalize;
     transition: .5s;
+    cursor: pointer;
 
 }
 
