@@ -3,8 +3,6 @@ let _inp2 = 0
 let flag = 0
 let k = 0
 let span
-let max = -10000000
-let min
 let _div
 let _div2
 let _div3
@@ -23,7 +21,6 @@ let res1 = []
 let res2 = []
 let _sec1 = []
 let _sec2 = []
-let tt = document.getElementsByClassName('box')[0]
 let j = 0
 document.getElementById('inp1').addEventListener('keyup', () => {
     _inp1 = document.getElementById('inp1').value
